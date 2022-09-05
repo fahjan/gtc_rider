@@ -6,7 +6,7 @@ import 'package:gtc_rider/utils/routing/app_routes.dart';
 import 'package:gtc_rider/utils/routing/pages.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

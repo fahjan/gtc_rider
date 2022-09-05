@@ -6,7 +6,7 @@ import 'package:gtc_rider/utils/routing/app_routes.dart';
 final List<GetPage> pages = <GetPage>[
   GetPage(
     name: AppRoutes.home,
-    page: () => HomePage(),
+    page: () => const HomePage(),
     binding: HomeBinding(),
     // fullscreenDialog: false,
   ),
