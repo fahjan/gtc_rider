@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gtc_rider/core/localization/local_controller.dart';
-import 'package:gtc_rider/features/home/presentation/controllers/home_controllers.dart';
 
 class HomePage extends GetView<Locale> {
   const HomePage({Key? key}) : super(key: key);
