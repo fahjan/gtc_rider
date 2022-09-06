@@ -25,7 +25,6 @@ class MyApp extends StatelessWidget {
             initialRoute: AppRoutes.home,
             getPages: pages,
             locale: const Locale('en', 'US'),
-            home: Container(),
           );
         });
   }

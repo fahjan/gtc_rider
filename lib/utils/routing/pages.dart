@@ -8,6 +8,5 @@ final List<GetPage> pages = <GetPage>[
     name: AppRoutes.home,
     page: () => const HomePage(),
     binding: HomeBinding(),
-    // fullscreenDialog: false,
   ),
 ];

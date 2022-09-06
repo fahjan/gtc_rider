@@ -23,10 +23,10 @@ class HomePage extends GetView<Locale> {
               children: [
                 ElevatedButton(
                     onPressed: () => myLocaleController.changeLanguage('en'),
-                    child: const Text('English')),
+                    child: Text('english'.tr)),
                 ElevatedButton(
                     onPressed: () => myLocaleController.changeLanguage('ar'),
-                    child: const Text('عربي')),
+                    child: Text('arbic'.tr)),
               ],
             )
           ],
