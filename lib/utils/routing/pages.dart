@@ -13,7 +13,7 @@ final List<GetPage> pages = <GetPage>[
   ),
    GetPage(
     name: AppRoutes.loginpage,
-    page: () => const LoginPage(),
+    page: () =>  LoginPage(),
     binding: LoginBinding(),
   ),
 ];

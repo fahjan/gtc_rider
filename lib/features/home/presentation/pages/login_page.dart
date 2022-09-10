@@ -1,4 +1,5 @@
-// ignore_for_file: sort_child_properties_last
+// ignore_for_file: sort_child_properties_last, must_be_immutable, prefer_const_constructors_in_immutables
+
 
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
@@ -6,12 +7,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:gtc_rider/features/home/presentation/controllers/login_controllers.dart';
 
 class LoginPage extends GetView<LoginController> {
-  const LoginPage({Key? key}) : super(key: key);
-
+  LoginPage({Key? key}) : super(key: key);
+  bool va1 = false;
   @override
   Widget build(BuildContext context) {
-    
-    bool? va1 = false;
     return Scaffold(
       body: ListView(children: [
         Container(
@@ -127,13 +126,68 @@ class LoginPage extends GetView<LoginController> {
                   ),
                 ),
               ),
+              const SizedBox(height: 12),
               CheckboxListTile(
                 value: va1,
-                onChanged: (va2) {
-                  va1=va2;
+                selected: va1,
+                onChanged: (bool? va2) {
+                  va1 = va2!;
                 },
-                title: Text('Remember me'),
-                
+                title: const Text('Remember me'),
+              ),
+              const SizedBox(height: 28),
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text('Login'),
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(double.infinity, 48),
+                  backgroundColor: const Color(0xFF25B6C7),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(24.0),
+                  ),
+                  textStyle: GoogleFonts.cairo(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 16),
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text('signin'),
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(double.infinity, 48),
+                  backgroundColor: Colors.white,
+                  foregroundColor: const Color(0xFF25B6C7),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(24.0),
+                      side: const BorderSide(
+                        color: Color(0xFF25B6C7),
+                        width: 2,
+                      )),
+                  textStyle: GoogleFonts.cairo(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 64),
+              Row(
+                children: [
+                  Text(
+                    'forgot password?',
+                    style: GoogleFonts.cairo(
+                        fontSize: 14, fontWeight: FontWeight.w500),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Click here',
+                      style: GoogleFonts.cairo(
+                          fontSize: 14, fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

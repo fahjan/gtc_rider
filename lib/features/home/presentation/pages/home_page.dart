@@ -27,6 +27,11 @@ class HomePage extends GetView<Locale> {
                 ElevatedButton(
                     onPressed: () => myLocaleController.changeLanguage('ar'),
                     child: Text('arbic'.tr)),
+                    ElevatedButton(
+                    onPressed: () {
+                      Get.toNamed('/loginpage');
+                    },
+                    child: const Text('login')),
               ],
             )
           ],
