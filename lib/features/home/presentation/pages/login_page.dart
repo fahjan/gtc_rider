@@ -129,7 +129,7 @@ class LoginPage extends GetView<LoginController> {
               const SizedBox(height: 12),
               CheckboxListTile(
                 value: va1,
-                
+                selected: va1,
                 onChanged: (bool? va2) {
                   va1 = va2!;
                 },
