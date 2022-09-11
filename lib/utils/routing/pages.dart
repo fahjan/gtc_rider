@@ -1,4 +1,5 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:gtc_rider/features/demo_onsignal/onsignal_page.dart';
 import 'package:gtc_rider/features/home/presentation/binding/home_binding.dart';
 import 'package:gtc_rider/features/home/presentation/pages/home_page.dart';
 import 'package:gtc_rider/utils/routing/app_routes.dart';
@@ -8,5 +9,9 @@ final List<GetPage> pages = <GetPage>[
     name: AppRoutes.home,
     page: () => const HomePage(),
     binding: HomeBinding(),
+  ),
+  GetPage(
+    name: AppRoutes.onsignal,
+    page: () => const OnSignalpage(),
   ),
 ];
