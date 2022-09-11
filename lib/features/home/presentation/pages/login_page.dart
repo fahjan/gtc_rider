@@ -4,6 +4,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:gtc_rider/core/style/app_colors.dart';
+import 'package:gtc_rider/core/style/app_sizes.dart';
 import 'package:gtc_rider/features/home/presentation/controllers/login_controllers.dart';
 
 class LoginPage extends GetView<LoginController> {
@@ -14,26 +16,26 @@ class LoginPage extends GetView<LoginController> {
     return Scaffold(
       body: ListView(children: [
         Container(
-          padding: const EdgeInsets.only(top: 51),
+          padding:  EdgeInsets.only(top: AppSizes.r51),
           alignment: Alignment.topCenter,
           width: double.infinity,
           height: 122,
           child: Text(
             'daddyEat',
             style: GoogleFonts.combo(
-              color: Colors.white,
+              color: AppColors.white,
               fontSize: 44,
               fontWeight: FontWeight.w400,
             ),
           ),
-          color: const Color(0xFF2A2A2A),
+          color: AppColors.brown,
         ),
         const SizedBox(height: 39),
         Text(
           'Are you ready to go?',
           textAlign: TextAlign.center,
           style: GoogleFonts.openSans(
-            color: const Color(0xFF2A2A2A),
+            color: AppColors.brown,
             fontSize: 24,
             fontWeight: FontWeight.w600,
           ),
@@ -43,7 +45,7 @@ class LoginPage extends GetView<LoginController> {
           'signin now',
           textAlign: TextAlign.center,
           style: GoogleFonts.openSans(
-            color: const Color(0xFF2A2A2A),
+            color: AppColors.brown,
             fontSize: 20,
             fontWeight: FontWeight.w600,
           ),
@@ -58,16 +60,16 @@ class LoginPage extends GetView<LoginController> {
             children: [
               TextFormField(
                 keyboardType: TextInputType.number,
-                style: const TextStyle(
+                style:  TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w400,
-                  color: Color(0xFF959DAD),
+                  color: AppColors.greyDark,
                 ),
                 decoration: InputDecoration(
-                  hintStyle: const TextStyle(
+                  hintStyle:  TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w400,
-                    color: Color(0xFF959DAD),
+                    color: AppColors.greyDark,
                   ),
                   hintText: "ID Number",
                   contentPadding: const EdgeInsets.only(
@@ -76,15 +78,15 @@ class LoginPage extends GetView<LoginController> {
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(24.0),
-                    borderSide: const BorderSide(
-                      color: Color(0xFFE7ECED),
+                    borderSide:  BorderSide(
+                      color: AppColors.grey,
                       width: 2,
                     ),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(24.0),
-                    borderSide: const BorderSide(
-                      color: Color(0xFFE7ECED),
+                    borderSide:  BorderSide(
+                      color: AppColors.grey,
                       width: 2,
                     ),
                   ),
@@ -94,16 +96,16 @@ class LoginPage extends GetView<LoginController> {
               TextFormField(
                 keyboardType: TextInputType.number,
                 obscureText: true,
-                style: const TextStyle(
+                style:  TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w400,
-                  color: Color(0xFF959DAD),
+                  color: AppColors.greyDark,
                 ),
                 decoration: InputDecoration(
-                  hintStyle: const TextStyle(
+                  hintStyle:  TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w400,
-                    color: Color(0xFF959DAD),
+                    color: AppColors.greyDark,
                   ),
                   hintText: "Password",
                   contentPadding: const EdgeInsets.only(
@@ -112,15 +114,15 @@ class LoginPage extends GetView<LoginController> {
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(24.0),
-                    borderSide: const BorderSide(
-                      color: Color(0xFFE7ECED),
+                    borderSide:  BorderSide(
+                      color: AppColors.grey,
                       width: 2,
                     ),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(24.0),
-                    borderSide: const BorderSide(
-                      color: Color(0xFFE7ECED),
+                    borderSide:  BorderSide(
+                      color: AppColors.grey,
                       width: 2,
                     ),
                   ),
@@ -141,7 +143,7 @@ class LoginPage extends GetView<LoginController> {
                 child: const Text('Login'),
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(double.infinity, 48),
-                  backgroundColor: const Color(0xFF25B6C7),
+                  backgroundColor: AppColors.primaryDark,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(24.0),
                   ),
@@ -157,12 +159,12 @@ class LoginPage extends GetView<LoginController> {
                 child: const Text('signin'),
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(double.infinity, 48),
-                  backgroundColor: Colors.white,
-                  foregroundColor: const Color(0xFF25B6C7),
+                  backgroundColor: AppColors.white,
+                  foregroundColor: AppColors.primaryDark,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(24.0),
-                      side: const BorderSide(
-                        color: Color(0xFF25B6C7),
+                      side:  BorderSide(
+                        color: AppColors.primaryDark,
                         width: 2,
                       )),
                   textStyle: GoogleFonts.cairo(
