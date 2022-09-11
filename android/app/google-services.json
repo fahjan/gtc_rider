@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "123773528987",
+    "project_id": "rider-9bebf",
+    "storage_bucket": "rider-9bebf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123773528987:android:6c46af1237f16e95ac0f3e",
+        "android_client_info": {
+          "package_name": "com.haiia.rider.gtc_rider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123773528987-4lufs03qsljml2akfsdft1tieliblfj1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBON8bMPqKnaKYijUn0DuAoJ8dx8fICOrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123773528987-4lufs03qsljml2akfsdft1tieliblfj1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
