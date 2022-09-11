@@ -1,8 +1,7 @@
-import 'package:get/get.dart';
-import 'package:onesignal_flutter/onesignal_flutter.dart';
 import 'package:gtc_rider/core/config/constants.dart';
+import 'package:onesignal_flutter/onesignal_flutter.dart';
 
-class OnSignalController extends GetxController {
+mixin OneSignalConfig{
   Future<void> initPlatformState() async {
     OneSignal.shared.setAppId(Constants.oneSignalAppId);
   }
