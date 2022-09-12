@@ -6,7 +6,8 @@ import 'package:gtc_rider/utils/one_signal_config.dart';
 import 'package:gtc_rider/utils/routing/app_routes.dart';
 import 'package:gtc_rider/utils/routing/pages.dart';
 
-void main() async{
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await OneSignalConfig.initPlatformState();
   runApp(const MyApp());
 }
@@ -16,7 +17,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return ScreenUtilInit(
         designSize: const Size(375, 812),
         minTextAdapt: true,
