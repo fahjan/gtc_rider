@@ -1,6 +1,5 @@
 // ignore_for_file: sort_child_properties_last, must_be_immutable, prefer_const_constructors_in_immutables
 
-
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,119 +15,119 @@ class LoginPage extends GetView<LoginController> {
     return Scaffold(
       body: ListView(children: [
         Container(
-          padding:  EdgeInsets.only(top: AppSizes.r51),
+          padding: EdgeInsets.only(top: AppSizes.r51),
           alignment: Alignment.topCenter,
           width: double.infinity,
-          height: 122,
+          height: AppSizes.r122,
           child: Text(
             'daddyEat',
             style: GoogleFonts.combo(
               color: AppColors.white,
-              fontSize: 44,
+              fontSize: FontSizes.sp44,
               fontWeight: FontWeight.w400,
             ),
           ),
           color: AppColors.brown,
         ),
-        const SizedBox(height: 39),
+        SizedBox(height: AppSizes.r40),
         Text(
           'Are you ready to go?',
           textAlign: TextAlign.center,
           style: GoogleFonts.openSans(
             color: AppColors.brown,
-            fontSize: 24,
+            fontSize: FontSizes.sp24,
             fontWeight: FontWeight.w600,
           ),
         ),
-        const SizedBox(height: 16),
+        SizedBox(height: AppSizes.r16),
         Text(
           'signin now',
           textAlign: TextAlign.center,
           style: GoogleFonts.openSans(
             color: AppColors.brown,
-            fontSize: 20,
+            fontSize: FontSizes.sp20,
             fontWeight: FontWeight.w600,
           ),
         ),
-        const SizedBox(height: 23),
+        SizedBox(height: AppSizes.r24),
         Padding(
-          padding: const EdgeInsets.only(
-            right: 40,
-            left: 40,
+          padding:  EdgeInsets.only(
+            right: AppSizes.r40,
+            left: AppSizes.r40,
           ),
           child: Column(
             children: [
               TextFormField(
                 keyboardType: TextInputType.number,
-                style:  TextStyle(
-                  fontSize: 16,
+                style: TextStyle(
+                  fontSize: FontSizes.sp16,
                   fontWeight: FontWeight.w400,
                   color: AppColors.greyDark,
                 ),
                 decoration: InputDecoration(
-                  hintStyle:  TextStyle(
-                    fontSize: 16,
+                  hintStyle: TextStyle(
+                    fontSize: FontSizes.sp16,
                     fontWeight: FontWeight.w400,
                     color: AppColors.greyDark,
                   ),
                   hintText: "ID Number",
-                  contentPadding: const EdgeInsets.only(
-                    right: 25,
-                    left: 25,
+                  contentPadding:  EdgeInsets.only(
+                    right: AppSizes.r25,
+                    left: AppSizes.r25,
                   ),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(24.0),
-                    borderSide:  BorderSide(
+                    borderRadius: BorderRadius.circular(AppSizes.r24),
+                    borderSide: BorderSide(
                       color: AppColors.grey,
-                      width: 2,
+                      width: AppSizes.r2,
                     ),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(24.0),
-                    borderSide:  BorderSide(
+                    borderRadius: BorderRadius.circular(AppSizes.r24),
+                    borderSide: BorderSide(
                       color: AppColors.grey,
-                      width: 2,
+                      width: AppSizes.r2,
                     ),
                   ),
                 ),
               ),
-              const SizedBox(height: 12),
+              SizedBox(height: AppSizes.r12),
               TextFormField(
                 keyboardType: TextInputType.number,
                 obscureText: true,
-                style:  TextStyle(
-                  fontSize: 16,
+                style: TextStyle(
+                  fontSize: FontSizes.sp16,
                   fontWeight: FontWeight.w400,
                   color: AppColors.greyDark,
                 ),
                 decoration: InputDecoration(
-                  hintStyle:  TextStyle(
-                    fontSize: 16,
+                  hintStyle: TextStyle(
+                    fontSize: FontSizes.sp16,
                     fontWeight: FontWeight.w400,
                     color: AppColors.greyDark,
                   ),
                   hintText: "Password",
-                  contentPadding: const EdgeInsets.only(
-                    right: 25,
-                    left: 25,
+                  contentPadding:  EdgeInsets.only(
+                    right: AppSizes.r25,
+                    left: AppSizes.r25,
                   ),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(24.0),
-                    borderSide:  BorderSide(
+                    borderRadius: BorderRadius.circular(AppSizes.r24),
+                    borderSide: BorderSide(
                       color: AppColors.grey,
-                      width: 2,
+                      width: AppSizes.r2,
                     ),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(24.0),
-                    borderSide:  BorderSide(
+                    borderRadius: BorderRadius.circular(AppSizes.r24),
+                    borderSide: BorderSide(
                       color: AppColors.grey,
-                      width: 2,
+                      width: AppSizes.r2,
                     ),
                   ),
                 ),
               ),
-              const SizedBox(height: 12),
+              SizedBox(height: AppSizes.r12),
               CheckboxListTile(
                 value: va1,
                 selected: va1,
@@ -137,56 +136,56 @@ class LoginPage extends GetView<LoginController> {
                 },
                 title: const Text('Remember me'),
               ),
-              const SizedBox(height: 28),
+              SizedBox(height: AppSizes.r28),
               ElevatedButton(
                 onPressed: () {},
                 child: const Text('Login'),
                 style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(double.infinity, 48),
+                  minimumSize:  Size(double.infinity, AppSizes.r48),
                   backgroundColor: AppColors.primaryDark,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(24.0),
+                    borderRadius: BorderRadius.circular(AppSizes.r24),
                   ),
                   textStyle: GoogleFonts.cairo(
-                    fontSize: 16,
+                    fontSize: FontSizes.sp16,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: AppSizes.r16),
               ElevatedButton(
                 onPressed: () {},
                 child: const Text('signin'),
                 style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(double.infinity, 48),
+                  minimumSize:  Size(double.infinity, AppSizes.r48),
                   backgroundColor: AppColors.white,
                   foregroundColor: AppColors.primaryDark,
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(24.0),
-                      side:  BorderSide(
+                      borderRadius: BorderRadius.circular(AppSizes.r24),
+                      side: BorderSide(
                         color: AppColors.primaryDark,
-                        width: 2,
+                        width: AppSizes.r2,
                       )),
                   textStyle: GoogleFonts.cairo(
-                    fontSize: 16,
+                    fontSize: FontSizes.sp16,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
               ),
-              const SizedBox(height: 64),
+              SizedBox(height: AppSizes.r64),
               Row(
                 children: [
                   Text(
                     'forgot password?',
                     style: GoogleFonts.cairo(
-                        fontSize: 14, fontWeight: FontWeight.w500),
+                        fontSize: FontSizes.sp14, fontWeight: FontWeight.w500),
                   ),
                   TextButton(
                     onPressed: () {},
                     child: Text(
                       'Click here',
                       style: GoogleFonts.cairo(
-                          fontSize: 14, fontWeight: FontWeight.w500),
+                          fontSize: FontSizes.sp14, fontWeight: FontWeight.w500),
                     ),
                   ),
                 ],

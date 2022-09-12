@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget with OneSignalConfig {
   Widget build(BuildContext context) {
     initPlatformState();
     return ScreenUtilInit(
-        designSize: const Size(375, 812),
+        designSize: const Size(375, 667),
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (context, child) {
