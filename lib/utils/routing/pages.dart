@@ -1,5 +1,4 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
-import 'package:gtc_rider/features/demo_onsignal/onsignal_page.dart';
 import 'package:gtc_rider/features/home/presentation/binding/home_binding.dart';
 import 'package:gtc_rider/features/home/presentation/pages/home_page.dart';
 import 'package:gtc_rider/features/splash_Screen/presentation/pages/splash_screen_page.dart';
@@ -12,6 +11,7 @@ final List<GetPage> pages = <GetPage>[
     page: () => const HomePage(),
     binding: HomeBinding(),
   ),
+<<<<<<< HEAD
   GetPage(
     name: AppRoutes.onsignal,
     page: () => const OnSignalpage(),
@@ -21,4 +21,6 @@ final List<GetPage> pages = <GetPage>[
     page: () => SplashScreenPage(),
     binding: SplashScreenBinding(),
   ),
+=======
+>>>>>>> main
 ];
