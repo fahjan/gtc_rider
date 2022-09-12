@@ -11,16 +11,9 @@ final List<GetPage> pages = <GetPage>[
     page: () => const HomePage(),
     binding: HomeBinding(),
   ),
-<<<<<<< HEAD
-  GetPage(
-    name: AppRoutes.onsignal,
-    page: () => const OnSignalpage(),
-  ),
   GetPage(
     name: AppRoutes.splashScreen,
-    page: () => SplashScreenPage(),
+    page: () => const SplashScreenPage(),
     binding: SplashScreenBinding(),
   ),
-=======
->>>>>>> main
 ];
