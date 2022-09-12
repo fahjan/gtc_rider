@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gtc_rider/core/localization/local_controller.dart';
-import 'package:gtc_rider/utils/one_signal_config.dart';
 
-class HomePage extends GetView<Locale>  {
+class HomePage extends GetView<Locale> {
   const HomePage({Key? key}) : super(key: key);
 
   @override
