@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
+import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gtc_rider/core/style/app_colors.dart';
 import 'package:gtc_rider/core/style/app_sizes.dart';
@@ -20,7 +21,7 @@ class LoginPage extends GetView<LoginController> {
           width: double.infinity,
           height: AppSizes.r122,
           child: Text(
-            'daddyEat',
+            'daddyEat'.tr,
             style: GoogleFonts.combo(
               color: AppColors.white,
               fontSize: FontSizes.sp44,
@@ -31,7 +32,7 @@ class LoginPage extends GetView<LoginController> {
         ),
         SizedBox(height: AppSizes.r40),
         Text(
-          'Are you ready to go?',
+          'ready_to_go'.tr,
           textAlign: TextAlign.center,
           style: GoogleFonts.openSans(
             color: AppColors.brown,
@@ -41,7 +42,7 @@ class LoginPage extends GetView<LoginController> {
         ),
         SizedBox(height: AppSizes.r16),
         Text(
-          'signin now',
+          'signin_now'.tr,
           textAlign: TextAlign.center,
           style: GoogleFonts.openSans(
             color: AppColors.brown,
@@ -70,7 +71,7 @@ class LoginPage extends GetView<LoginController> {
                     fontWeight: FontWeight.w400,
                     color: AppColors.greyDark,
                   ),
-                  hintText: "ID Number",
+                  hintText: 'iD_Number'.tr,
                   contentPadding:  EdgeInsets.only(
                     right: AppSizes.r25,
                     left: AppSizes.r25,
@@ -106,7 +107,7 @@ class LoginPage extends GetView<LoginController> {
                     fontWeight: FontWeight.w400,
                     color: AppColors.greyDark,
                   ),
-                  hintText: "Password",
+                  hintText: 'password'.tr,
                   contentPadding:  EdgeInsets.only(
                     right: AppSizes.r25,
                     left: AppSizes.r25,
@@ -139,7 +140,7 @@ class LoginPage extends GetView<LoginController> {
               SizedBox(height: AppSizes.r28),
               ElevatedButton(
                 onPressed: () {},
-                child: const Text('Login'),
+                child:  Text('Login'.tr),
                 style: ElevatedButton.styleFrom(
                   minimumSize:  Size(double.infinity, AppSizes.r48),
                   backgroundColor: AppColors.primaryDark,
@@ -155,7 +156,7 @@ class LoginPage extends GetView<LoginController> {
               SizedBox(height: AppSizes.r16),
               ElevatedButton(
                 onPressed: () {},
-                child: const Text('signin'),
+                child:  Text('signin'.tr),
                 style: ElevatedButton.styleFrom(
                   minimumSize:  Size(double.infinity, AppSizes.r48),
                   backgroundColor: AppColors.white,
@@ -176,14 +177,14 @@ class LoginPage extends GetView<LoginController> {
               Row(
                 children: [
                   Text(
-                    'forgot password?',
+                    'forgot_password'.tr,
                     style: GoogleFonts.cairo(
                         fontSize: FontSizes.sp14, fontWeight: FontWeight.w500),
                   ),
                   TextButton(
                     onPressed: () {},
                     child: Text(
-                      'Click here',
+                      'click_here'.tr,
                       style: GoogleFonts.cairo(
                           fontSize: FontSizes.sp14, fontWeight: FontWeight.w500),
                     ),
