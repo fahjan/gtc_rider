@@ -4,7 +4,7 @@ import 'package:gtc_rider/core/localization/local_controller.dart';
 import 'package:gtc_rider/utils/one_signal_config.dart';
 import 'package:gtc_rider/utils/routing/app_routes.dart';
 
-class HomePage extends GetView<Locale>  {
+class HomePage extends GetView<MyLocaleController> {
   const HomePage({Key? key}) : super(key: key);
 
   @override

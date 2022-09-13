@@ -5,17 +5,21 @@ import 'package:gtc_rider/core/localization/locale_strings.dart';
 import 'package:gtc_rider/utils/one_signal_config.dart';
 import 'package:gtc_rider/utils/routing/app_routes.dart';
 import 'package:gtc_rider/utils/routing/pages.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+Future<void> main() async {
+  await dotenv.load();
+  WidgetsFlutterBinding.ensureInitialized();
+  await OneSignalConfig.initPlatformState();
+
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget with OneSignalConfig {
+class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    initPlatformState();
     return ScreenUtilInit(
         designSize: const Size(375, 667),
         minTextAdapt: true,
@@ -24,7 +28,7 @@ class MyApp extends StatelessWidget with OneSignalConfig {
           return GetMaterialApp(
             translations: LocaleString(),
             debugShowCheckedModeBanner: false,
-            initialRoute: AppRoutes.home,
+            initialRoute: AppRoutes.splashScreen,
             getPages: pages,
             locale: const Locale('en', 'US'),
           );
