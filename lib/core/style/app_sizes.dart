@@ -1,1 +1,2 @@
-class AppSizes {}
+class AppSizes {
+}
