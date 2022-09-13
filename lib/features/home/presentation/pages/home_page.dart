@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gtc_rider/core/localization/local_controller.dart';
 
-class HomePage extends GetView<Locale> {
+class HomePage extends GetView<MyLocaleController> {
   const HomePage({Key? key}) : super(key: key);
 
   @override
