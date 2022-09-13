@@ -1,8 +1,8 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:gtc_rider/features/home/presentation/binding/home_binding.dart';
-import 'package:gtc_rider/features/home/presentation/binding/login_binding.dart';
+import 'package:gtc_rider/features/login_screen/binding/login_binding.dart';
 import 'package:gtc_rider/features/home/presentation/pages/home_page.dart';
-import 'package:gtc_rider/features/home/presentation/pages/login_page.dart';
+import 'package:gtc_rider/features/login_screen/presentation/pages/login_page.dart';
 import 'package:gtc_rider/features/splash_Screen/presentation/pages/splash_screen_page.dart';
 import 'package:gtc_rider/features/splash_screen/binding/splash_screen_binding.dart';
 import 'package:gtc_rider/utils/routing/app_routes.dart';
@@ -14,7 +14,7 @@ final List<GetPage> pages = <GetPage>[
     binding: HomeBinding(),
   ),
    GetPage(
-    name: AppRoutes.loginpage,
+    name: AppRoutes.loginPage,
     page: () =>  LoginPage(),
     binding: LoginBinding(),),
   GetPage(

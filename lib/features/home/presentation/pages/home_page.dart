@@ -31,7 +31,7 @@ class HomePage extends GetView<MyLocaleController> {
                     child: Text('arabic'.tr)),
                     ElevatedButton(
                     onPressed: () {
-                      Get.toNamed(AppRoutes.loginpage);
+                      Get.toNamed(AppRoutes.loginPage);
                     },
                     child:  Text('login'.tr)),
               ],

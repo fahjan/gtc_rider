@@ -6,7 +6,8 @@ import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gtc_rider/core/style/app_colors.dart';
 import 'package:gtc_rider/core/style/app_sizes.dart';
-import 'package:gtc_rider/features/home/presentation/controllers/login_controllers.dart';
+import 'package:gtc_rider/features/login_screen/controllers/login_controllers.dart';
+import 'package:gtc_rider/features/login_screen/presentation/widgets/text_form_field_widget.dart';
 
 class LoginPage extends GetView<LoginController> {
   LoginPage({Key? key}) : super(key: key);
@@ -52,81 +53,22 @@ class LoginPage extends GetView<LoginController> {
         ),
         SizedBox(height: AppSizes.r24),
         Padding(
-          padding:  EdgeInsets.only(
+          padding: EdgeInsets.only(
             right: AppSizes.r40,
             left: AppSizes.r40,
           ),
           child: Column(
             children: [
-              TextFormField(
+              TextFormFieldWidget(
                 keyboardType: TextInputType.number,
-                style: TextStyle(
-                  fontSize: FontSizes.sp16,
-                  fontWeight: FontWeight.w400,
-                  color: AppColors.greyDark,
-                ),
-                decoration: InputDecoration(
-                  hintStyle: TextStyle(
-                    fontSize: FontSizes.sp16,
-                    fontWeight: FontWeight.w400,
-                    color: AppColors.greyDark,
-                  ),
-                  hintText: 'iD_Number'.tr,
-                  contentPadding:  EdgeInsets.only(
-                    right: AppSizes.r25,
-                    left: AppSizes.r25,
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(AppSizes.r24),
-                    borderSide: BorderSide(
-                      color: AppColors.grey,
-                      width: AppSizes.r2,
-                    ),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(AppSizes.r24),
-                    borderSide: BorderSide(
-                      color: AppColors.grey,
-                      width: AppSizes.r2,
-                    ),
-                  ),
-                ),
+                show_Password: false,
+                hinttext: 'ID Number',
               ),
               SizedBox(height: AppSizes.r12),
-              TextFormField(
-                keyboardType: TextInputType.number,
-                obscureText: true,
-                style: TextStyle(
-                  fontSize: FontSizes.sp16,
-                  fontWeight: FontWeight.w400,
-                  color: AppColors.greyDark,
-                ),
-                decoration: InputDecoration(
-                  hintStyle: TextStyle(
-                    fontSize: FontSizes.sp16,
-                    fontWeight: FontWeight.w400,
-                    color: AppColors.greyDark,
-                  ),
-                  hintText: 'password'.tr,
-                  contentPadding:  EdgeInsets.only(
-                    right: AppSizes.r25,
-                    left: AppSizes.r25,
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(AppSizes.r24),
-                    borderSide: BorderSide(
-                      color: AppColors.grey,
-                      width: AppSizes.r2,
-                    ),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(AppSizes.r24),
-                    borderSide: BorderSide(
-                      color: AppColors.grey,
-                      width: AppSizes.r2,
-                    ),
-                  ),
-                ),
+              TextFormFieldWidget(
+                keyboardType: TextInputType.visiblePassword,
+                show_Password: true,
+                hinttext: 'Password',
               ),
               SizedBox(height: AppSizes.r12),
               CheckboxListTile(
@@ -140,9 +82,9 @@ class LoginPage extends GetView<LoginController> {
               SizedBox(height: AppSizes.r28),
               ElevatedButton(
                 onPressed: () {},
-                child:  Text('Login'.tr),
+                child: Text('Login'.tr),
                 style: ElevatedButton.styleFrom(
-                  minimumSize:  Size(double.infinity, AppSizes.r48),
+                  minimumSize: Size(double.infinity, AppSizes.r48),
                   backgroundColor: AppColors.primaryDark,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(AppSizes.r24),
@@ -156,9 +98,9 @@ class LoginPage extends GetView<LoginController> {
               SizedBox(height: AppSizes.r16),
               ElevatedButton(
                 onPressed: () {},
-                child:  Text('signin'.tr),
+                child: Text('signin'.tr),
                 style: ElevatedButton.styleFrom(
-                  minimumSize:  Size(double.infinity, AppSizes.r48),
+                  minimumSize: Size(double.infinity, AppSizes.r48),
                   backgroundColor: AppColors.white,
                   foregroundColor: AppColors.primaryDark,
                   shape: RoundedRectangleBorder(
@@ -186,7 +128,8 @@ class LoginPage extends GetView<LoginController> {
                     child: Text(
                       'click_here'.tr,
                       style: GoogleFonts.cairo(
-                          fontSize: FontSizes.sp14, fontWeight: FontWeight.w500),
+                          fontSize: FontSizes.sp14,
+                          fontWeight: FontWeight.w500),
                     ),
                   ),
                 ],
