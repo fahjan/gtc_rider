@@ -6,8 +6,8 @@ import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gtc_rider/core/style/app_colors.dart';
 import 'package:gtc_rider/core/style/app_sizes.dart';
-import 'package:gtc_rider/features/login_screen/controllers/login_controllers.dart';
-import 'package:gtc_rider/features/login_screen/presentation/widgets/text_form_field_widget.dart';
+import 'package:gtc_rider/features/auth/login_screen/controllers/login_controllers.dart';
+import 'package:gtc_rider/features/auth/login_screen/presentation/widgets/text_form_field_widget.dart';
 
 class LoginPage extends GetView<LoginController> {
   LoginPage({Key? key}) : super(key: key);
