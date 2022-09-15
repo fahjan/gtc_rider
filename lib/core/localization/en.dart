@@ -13,4 +13,13 @@ Map<String, String> en = {
   'signin': 'signin',
   'forgot_password':'forgot password',
   'click_here':'Click here',
+  'order_today':'Order Today',
+  'trip_total':'Trip Total',
+  'planner':'Planner',
+  'earnings':'Earnings',
+  'referrals':'Referrals',
+  'statistics':'Statistics',
+  'inbox':'Inbox',
+  'setting':'Setting',
+  'logout':'Logout',
 };
