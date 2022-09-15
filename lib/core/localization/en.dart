@@ -7,5 +7,17 @@ Map<String, String> en = {
   'Order' : 'Order',
   'Restaurant taking too long' : 'Restaurant taking too long' ,
   'Report wait or reject order' : 'Report wait or reject order' ,
-  'Call rider support' : 'Call rider support'
+  'Call rider support' : 'Call rider support',
+  'login':'login',
+  'daddyEat':'daddyEat',
+  'ready_to_go':'Are you ready to go?',
+  'signin_now':'signin now',
+  'iD_Number': 'ID Number',
+  'password':'Password',
+  'remember_me':'Remember me',
+  'Login':'Login',
+  'signin': 'signin',
+  'forgot_password':'forgot password',
+  'click_here':'Click here',
+
 };
