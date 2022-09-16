@@ -1,5 +1,3 @@
-// ignore_for_file: sort_child_properties_last, must_be_immutable, prefer_const_constructors_in_immutables
-
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
@@ -85,7 +83,6 @@ class LoginPage extends GetView<LoginController> {
                 child: Text('Login'.tr),
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(double.infinity, AppSizes.r48),
-                  backgroundColor: AppColors.primaryDark,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(AppSizes.r24),
                   ),
@@ -101,8 +98,6 @@ class LoginPage extends GetView<LoginController> {
                 child: Text('signin'.tr),
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(double.infinity, AppSizes.r48),
-                  backgroundColor: AppColors.white,
-                  foregroundColor: AppColors.primaryDark,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(AppSizes.r24),
                       side: BorderSide(
