@@ -20,6 +20,7 @@ class AppSizes {
 
 
 }
+
 class FontSizes {
   static final double sp12 = 12.sp;
   static final double sp14 = 14.sp;

@@ -5,8 +5,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gtc_rider/core/style/app_colors.dart';
+import 'package:gtc_rider/core/style/app_image.dart';
 import 'package:gtc_rider/core/style/app_sizes.dart';
-import 'package:gtc_rider/core/styles/app_image.dart';
 import 'package:gtc_rider/features/auth/drawer_widget/controllers/drawers_controller.dart';
 
 class DrawerWidget extends GetView<DrawersController> {

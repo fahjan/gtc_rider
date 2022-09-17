@@ -23,4 +23,6 @@ Map<String, String> ar = {
   'setting':'إعدادات',
   'faqs':'أسئلة وأجوبة',
   'logout':'تسجيل خروج',
+  'forgot_password': 'هل نسيت كلمة المرور؟',
+  'click_here': 'انقر هنا',
 };

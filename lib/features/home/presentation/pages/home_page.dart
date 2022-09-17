@@ -31,11 +31,11 @@ class HomePage extends GetView<MyLocaleController> {
                 ElevatedButton(
                     onPressed: () => myLocaleController.changeLanguage('ar'),
                     child: Text('arabic'.tr)),
-                    ElevatedButton(
+                ElevatedButton(
                     onPressed: () {
                       Get.toNamed(AppRoutes.loginPage);
                     },
-                    child:  Text('login'.tr)),
+                    child: Text('login'.tr)),
               ],
             )
           ],
