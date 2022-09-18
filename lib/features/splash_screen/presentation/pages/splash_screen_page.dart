@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gtc_rider/core/styles/app_image.dart';
+import 'package:gtc_rider/core/style/app_image.dart';
 import 'package:gtc_rider/features/splash_screen/controllers/splash_screen_controller.dart';
 
 class SplashScreenPage extends GetView<SplashScreenController> {

@@ -13,8 +13,8 @@ class AppSizes {
   static final double r51 = 51.r;
   static final double r64 = 64.r;
   static final double r122 = 122.r;
-
 }
+
 class FontSizes {
   static final double sp14 = 14.sp;
   static final double sp16 = 16.sp;

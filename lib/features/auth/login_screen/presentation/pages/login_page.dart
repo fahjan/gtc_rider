@@ -4,6 +4,7 @@ import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gtc_rider/core/style/app_colors.dart';
 import 'package:gtc_rider/core/style/app_sizes.dart';
+import 'package:gtc_rider/core/widgets/my_textstyle_widget.dart';
 import 'package:gtc_rider/features/auth/login_screen/controllers/login_controllers.dart';
 import 'package:gtc_rider/features/auth/login_screen/presentation/widgets/text_form_field_widget.dart';
 
@@ -19,35 +20,28 @@ class LoginPage extends GetView<LoginController> {
           alignment: Alignment.topCenter,
           width: double.infinity,
           height: AppSizes.r122,
-          child: Text(
-            'daddyEat'.tr,
-            style: GoogleFonts.combo(
-              color: AppColors.white,
-              fontSize: FontSizes.sp44,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
           color: AppColors.brown,
+          child: MyTextStyleWidget(
+            text: 'daddyEat'.tr,
+            fontWeight: FontWeight.bold,
+            size: FontSizes.sp44,
+          ),
         ),
         SizedBox(height: AppSizes.r40),
-        Text(
-          'ready_to_go'.tr,
+        MyTextStyleWidget(
           textAlign: TextAlign.center,
-          style: GoogleFonts.openSans(
-            color: AppColors.brown,
-            fontSize: FontSizes.sp24,
-            fontWeight: FontWeight.w600,
-          ),
+          text: 'ready_to_go'.tr,
+          color: AppColors.brown,
+          fontWeight: FontWeight.w600,
+          size: FontSizes.sp24,
         ),
         SizedBox(height: AppSizes.r16),
-        Text(
-          'signin_now'.tr,
+        MyTextStyleWidget(
           textAlign: TextAlign.center,
-          style: GoogleFonts.openSans(
-            color: AppColors.brown,
-            fontSize: FontSizes.sp20,
-            fontWeight: FontWeight.w600,
-          ),
+          text: 'signin_now'.tr,
+          color: AppColors.brown,
+          fontWeight: FontWeight.w600,
+          size: FontSizes.sp24,
         ),
         SizedBox(height: AppSizes.r24),
         Padding(
@@ -75,15 +69,17 @@ class LoginPage extends GetView<LoginController> {
                 onChanged: (bool? va2) {
                   va1 = va2!;
                 },
-                title: const Text('Remember me'),
+                title: MyTextStyleWidget(
+                  text: 'remember_me'.tr,
+                  color: AppColors.brown,
+                ),
               ),
               SizedBox(height: AppSizes.r28),
               ElevatedButton(
                 onPressed: () {},
-                child: Text('Login'.tr),
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(double.infinity, AppSizes.r48),
-                  backgroundColor: AppColors.primaryDark,
+                  primary: AppColors.primary,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(AppSizes.r24),
                   ),
@@ -92,15 +88,14 @@ class LoginPage extends GetView<LoginController> {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
+                child: MyTextStyleWidget(text: 'Login'.tr),
               ),
               SizedBox(height: AppSizes.r16),
               ElevatedButton(
                 onPressed: () {},
-                child: Text('signin'.tr),
                 style: ElevatedButton.styleFrom(
+                  primary: AppColors.white,
                   minimumSize: Size(double.infinity, AppSizes.r48),
-                  backgroundColor: AppColors.white,
-                  foregroundColor: AppColors.primaryDark,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(AppSizes.r24),
                       side: BorderSide(
@@ -112,23 +107,26 @@ class LoginPage extends GetView<LoginController> {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
+                child: MyTextStyleWidget(
+                  text: 'signin'.tr,
+                  color: AppColors.brown,
+                ),
               ),
               SizedBox(height: AppSizes.r64),
               Row(
                 children: [
-                  Text(
-                    'forgot_password'.tr,
-                    style: GoogleFonts.cairo(
-                        fontSize: FontSizes.sp14, fontWeight: FontWeight.w500),
-                  ),
+                  MyTextStyleWidget(
+                      text: 'forgot_password?'.tr,
+                      size: FontSizes.sp14,
+                      color: AppColors.brown,
+                      fontWeight: FontWeight.w500),
                   TextButton(
                     onPressed: () {},
-                    child: Text(
-                      'click_here'.tr,
-                      style: GoogleFonts.cairo(
-                          fontSize: FontSizes.sp14,
-                          fontWeight: FontWeight.w500),
-                    ),
+                    child: MyTextStyleWidget(
+                        text: 'click_here'.tr,
+                        size: FontSizes.sp14,
+                        color: AppColors.primaryDark,
+                        fontWeight: FontWeight.w500),
                   ),
                 ],
               ),
