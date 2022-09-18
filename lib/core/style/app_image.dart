@@ -1,3 +1,5 @@
+// ignore_for_file: unused_field
+
 class ImageApp {
   static const String _baseImagePath = 'assets/images/';
   static const String _baseSvgPath = 'assets/svg/';

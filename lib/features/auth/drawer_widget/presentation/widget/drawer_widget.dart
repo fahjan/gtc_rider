@@ -1,13 +1,13 @@
-// ignore_for_file: sort_child_properties_last
+// ignore_for_file: sort_child_properties_last, must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gtc_rider/core/style/app_colors.dart';
 import 'package:gtc_rider/core/style/app_image.dart';
 import 'package:gtc_rider/core/style/app_sizes.dart';
 import 'package:gtc_rider/features/auth/drawer_widget/controllers/drawers_controller.dart';
+import 'package:gtc_rider/features/auth/drawer_widget/presentation/widget/list_tile_widget.dart';
 
 class DrawerWidget extends GetView<DrawersController> {
   const DrawerWidget({Key? key}) : super(key: key);
@@ -103,48 +103,33 @@ class DrawerWidget extends GetView<DrawersController> {
           ],
         ),
         SizedBox(height: AppSizes.r30),
-        ListTile(
-          horizontalTitleGap: AppSizes.r14,
-          dense: true,
-          minLeadingWidth: 0,
+        ListTileWidget(
           onTap: () {},
-          title: Text(
-            'planner'.tr,
-            style: GoogleFonts.cairo(
-                fontSize: FontSizes.sp18, fontWeight: FontWeight.w700),
-          ),
+          title: TextListTile(text: 'planner'.tr),
+          horizontalTitleGap: AppSizes.r9,
+          minLeadingWidth: 0,
           leading: Icon(
             Icons.calendar_month,
             color: AppColors.primary,
           ),
         ),
         SizedBox(height: AppSizes.r10),
-        ListTile(
-          horizontalTitleGap: AppSizes.r14,
-          dense: true,
-          minLeadingWidth: 0,
+        ListTileWidget(
           onTap: () {},
-          title: Text(
-            'earnings'.tr,
-            style: GoogleFonts.cairo(
-                fontSize: FontSizes.sp18, fontWeight: FontWeight.w700),
-          ),
+          title: TextListTile(text: 'earnings'.tr),
+          horizontalTitleGap: AppSizes.r9,
+          minLeadingWidth: 0,
           leading: Icon(
             Icons.attach_money,
             color: AppColors.primary,
           ),
         ),
         SizedBox(height: AppSizes.r10),
-        ListTile(
-          horizontalTitleGap: AppSizes.r14,
-          dense: true,
-          minLeadingWidth: 0,
+        ListTileWidget(
           onTap: () {},
-          title: Text(
-            'referrals'.tr,
-            style: GoogleFonts.cairo(
-                fontSize: FontSizes.sp18, fontWeight: FontWeight.w700),
-          ),
+          title: TextListTile(text: 'referrals'.tr),
+          horizontalTitleGap: AppSizes.r9,
+          minLeadingWidth: 0,
           leading: Icon(
             Icons.font_download,
             color: AppColors.primary,
@@ -156,36 +141,26 @@ class DrawerWidget extends GetView<DrawersController> {
           color: AppColors.grey,
           height: 0,
         ),
-        ListTile(
-          contentPadding: EdgeInsetsDirectional.only(start: AppSizes.r51),
-          dense: true,
+        ListTileWidget(
+          title: TextListTile(text: 'statistics'.tr),
           onTap: () {},
-          title: Text(
-            'statistics'.tr,
-            style: GoogleFonts.cairo(
-                fontSize: FontSizes.sp18, fontWeight: FontWeight.w700),
-          ),
+          contentPadding: EdgeInsetsDirectional.only(start: AppSizes.r48),
         ),
-        ListTile(
-          contentPadding: EdgeInsetsDirectional.only(start: AppSizes.r51),
-          dense: true,
+        ListTileWidget(
+          title: TextListTile(text: 'inbox'.tr),
           onTap: () {},
-          title: Text(
-            'inbox'.tr,
-            style: GoogleFonts.cairo(
-                fontSize: FontSizes.sp18, fontWeight: FontWeight.w700),
-          ),
+          contentPadding: EdgeInsetsDirectional.only(start: AppSizes.r48),
           trailing: Padding(
-            padding:  EdgeInsetsDirectional.only(end: AppSizes.r122),
+            padding: EdgeInsetsDirectional.only(end: AppSizes.r122),
             child: Container(
-              padding: EdgeInsetsDirectional.only(end: AppSizes.r12,start: AppSizes.r12),
+              padding: EdgeInsetsDirectional.only(
+                  end: AppSizes.r12, start: AppSizes.r12),
               child: Text(
                 '1',
                 style: GoogleFonts.cairo(
-                  fontSize: FontSizes.sp12,
-                  fontWeight: FontWeight.w700,
-                  color: AppColors.white
-                ),
+                    fontSize: FontSizes.sp12,
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.white),
               ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(AppSizes.r30),
@@ -194,41 +169,26 @@ class DrawerWidget extends GetView<DrawersController> {
             ),
           ),
         ),
-        ListTile(
-          contentPadding: EdgeInsetsDirectional.only(start: AppSizes.r51),
-          dense: true,
+        ListTileWidget(
+          title: TextListTile(text: 'setting'.tr),
           onTap: () {},
-          title: Text(
-            'setting'.tr,
-            style: GoogleFonts.cairo(
-                fontSize: FontSizes.sp18, fontWeight: FontWeight.w700),
-          ),
+          contentPadding: EdgeInsetsDirectional.only(start: AppSizes.r48),
         ),
-        ListTile(
-          contentPadding: EdgeInsetsDirectional.only(start: AppSizes.r51),
-          dense: true,
+        ListTileWidget(
+          title: TextListTile(text: 'faqs'.tr),
           onTap: () {},
-          title: Text(
-            'faqs'.tr,
-            style: GoogleFonts.cairo(
-                fontSize: FontSizes.sp18, fontWeight: FontWeight.w700),
-          ),
+          contentPadding: EdgeInsetsDirectional.only(start: AppSizes.r48),
         ),
         Divider(
           thickness: AppSizes.r2,
           color: AppColors.grey,
           height: 0,
         ),
-        ListTile(
-          horizontalTitleGap: AppSizes.r14,
-          minLeadingWidth: 0,
-          dense: true,
+        ListTileWidget(
           onTap: () {},
-          title: Text(
-            'logout'.tr,
-            style: GoogleFonts.cairo(
-                fontSize: FontSizes.sp18, fontWeight: FontWeight.w700),
-          ),
+          title: TextListTile(text: 'logout'.tr),
+          horizontalTitleGap: AppSizes.r9,
+          minLeadingWidth: 0,
           leading: Icon(
             Icons.logout,
             color: AppColors.primary,
