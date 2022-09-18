@@ -39,6 +39,7 @@ dependencies:
   dio: ^4.0.6
   get_storage: ^2.0.3
   onesignal_flutter: ^3.4.1
+  google_fonts: ^3.0.1
   flutter_dotenv: ^5.0.2
   firebase_core: ^1.21.1
   flutterfire_cli: ^0.2.4
@@ -69,9 +70,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/images/
     - .env
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

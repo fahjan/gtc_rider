@@ -1,9 +1,9 @@
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gtc_rider/core/localization/local_controller.dart';
-import 'package:gtc_rider/utils/one_signal_config.dart';
-
-class HomePage extends GetView<Locale>  {
+import 'package:gtc_rider/utils/routing/app_routes.dart';
+class HomePage extends GetView<MyLocaleController> {
   const HomePage({Key? key}) : super(key: key);
 
   @override
@@ -27,7 +27,12 @@ class HomePage extends GetView<Locale>  {
                     child: Text('english'.tr)),
                 ElevatedButton(
                     onPressed: () => myLocaleController.changeLanguage('ar'),
-                    child: Text('arbic'.tr)),
+                    child: Text('arabic'.tr)),
+                ElevatedButton(
+                    onPressed: () {
+                      Get.toNamed(AppRoutes.loginPage);
+                    },
+                    child: Text('login'.tr)),
               ],
             )
           ],
