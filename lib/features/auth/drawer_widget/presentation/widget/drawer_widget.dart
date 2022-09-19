@@ -1,4 +1,3 @@
-// ignore_for_file: sort_child_properties_last, must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,6 +7,7 @@ import 'package:gtc_rider/core/style/app_image.dart';
 import 'package:gtc_rider/core/style/app_sizes.dart';
 import 'package:gtc_rider/features/auth/drawer_widget/controllers/drawers_controller.dart';
 import 'package:gtc_rider/features/auth/drawer_widget/presentation/widget/list_tile_widget.dart';
+import 'package:gtc_rider/features/auth/drawer_widget/presentation/widget/text_list_tile.dart';
 
 class DrawerWidget extends GetView<DrawersController> {
   const DrawerWidget({Key? key}) : super(key: key);
@@ -23,7 +23,7 @@ class DrawerWidget extends GetView<DrawersController> {
             Image.asset(
               colorBlendMode: BlendMode.multiply,
               color: AppColors.brown.withOpacity(.67),
-              ImageApp.imagesdarwer,
+              ImageApp.imagesDarwer,
               height: AppSizes.r300,
               width: double.infinity,
               fit: BoxFit.fill,
