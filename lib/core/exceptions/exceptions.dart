@@ -1,0 +1,2 @@
+
+class ServiceNotFoundException extends FormatException{}

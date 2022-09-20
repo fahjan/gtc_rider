@@ -13,6 +13,7 @@ Future<void> main() async {
   await dotenv.load();
   WidgetsFlutterBinding.ensureInitialized();
   await OneSignalConfig.initPlatformState();
+  await OneSignalConfig.getDeviseFcmToken();
 
   runApp(const MyApp());
 }
