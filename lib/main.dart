@@ -28,10 +28,8 @@ class MyApp extends StatelessWidget {
           return GetMaterialApp(
             translations: LocaleString(),
             debugShowCheckedModeBanner: false,
-            initialRoute: AppRoutes.orderDetalisScreen,
-            getPages: pages,
+            initialRoute: AppRoutes.home,
             locale: const Locale('en', 'US'),
-          );
         });
   }
 }

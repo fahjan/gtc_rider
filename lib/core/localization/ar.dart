@@ -11,6 +11,6 @@ Map<String, String> ar = {
   'remember_me': 'تذكر بيانات الدخول',
   'Login': 'الدخول',
   'signin': 'تسجيل الدخول',
-  'forgot_password':'هل نسيت كلمة المرور؟',
-  'click_here':'انقر هنا',
+  'forgot_password': 'هل نسيت كلمة المرور؟',
+  'click_here': 'انقر هنا',
 };
