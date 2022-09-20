@@ -1,4 +1,6 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:gtc_rider/features/auth/order_details%20_screen/binding/order_details_binding.dart';
+import 'package:gtc_rider/features/auth/order_details%20_screen/presentation/pages/order_details_page.dart';
 import 'package:gtc_rider/features/home/presentation/binding/home_binding.dart';
 import 'package:gtc_rider/features/auth/login_screen/binding/login_binding.dart';
 import 'package:gtc_rider/features/home/presentation/pages/home_page.dart';
@@ -13,13 +15,19 @@ final List<GetPage> pages = <GetPage>[
     page: () => const HomePage(),
     binding: HomeBinding(),
   ),
-   GetPage(
+  GetPage(
     name: AppRoutes.loginPage,
-    page: () =>  LoginPage(),
-    binding: LoginBinding(),),
+    page: () => LoginPage(),
+    binding: LoginBinding(),
+  ),
   GetPage(
     name: AppRoutes.splashScreen,
     page: () => const SplashScreenPage(),
     binding: SplashScreenBinding(),
+  ),
+  GetPage(
+    name: AppRoutes.orderDetalisScreen,
+    page: () => const OrderDetailsPage(),
+    binding: OrderDetailsBinding(),
   ),
 ];
