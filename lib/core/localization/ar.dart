@@ -2,6 +2,12 @@ Map<String, String> ar = {
   'home_page': 'الصفحة الرئيسية',
   'Select_language': 'اختر اللغة',
   'arbic': 'عربي',
+  'help':'مساعدة',
+  'FAQs' : 'الاسئلة الاكثر استخداما',
+  'Order' : 'طلب',
+  'Restaurant taking too long' : 'المطعم يستغرق وقتًا طويلاً جدًا' ,
+  'Report wait or reject order' : 'الإبلاغ عن طلب الانتظار أو الرفض' ,
+  'Call rider support' : 'مكالمة دعم القيادة',
   'login': 'تسجيل دخول',
   'daddyEat': 'أبي يأكل',
   'ready_to_go': 'هل أنت مستعد للذهاب؟',
@@ -11,6 +17,9 @@ Map<String, String> ar = {
   'remember_me': 'تذكر بيانات الدخول',
   'Login': 'الدخول',
   'signin': 'تسجيل الدخول',
+  'forgot_password':'هل نسيت كلمة المرور؟',
+  'click_here':'انقر هنا',
+
   'forgot_password': 'هل نسيت كلمة المرور؟',
   'click_here': 'انقر هنا',
 };

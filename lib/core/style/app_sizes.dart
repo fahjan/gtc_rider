@@ -1,3 +1,4 @@
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppSizes {
@@ -20,4 +21,5 @@ class FontSizes {
   static final double sp20 = 20.sp;
   static final double sp24 = 24.sp;
   static final double sp44 = 44.sp;
+
 }
