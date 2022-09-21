@@ -6,6 +6,7 @@ import 'package:gtc_rider/core/exceptions/exceptions.dart';
 import 'package:gtc_rider/core/exceptions/failures.dart';
 import 'package:gtc_rider/features/auth/login_screen/domain/entities/login_base_entity.dart';
 import 'package:gtc_rider/features/auth/login_screen/domain/usecases/login_usecase.dart';
+import 'package:gtc_rider/utils/routing/app_routes.dart';
 
 class LoginController extends GetxController {
   final LoginUseCase _loginUseCase;
@@ -34,14 +35,15 @@ class LoginController extends GetxController {
     debugPrint('mohammed :${emailControler.value.text}');
     debugPrint('mohammed :${passwordControler.value.text}');
     debugPrint('mohammed :$riderFcmToken');
-    // if (data.isLeft()) {
-    //   Get.showSnackbar(
-    //     const GetSnackBar(
-    //       title: 'error',
-    //       message: 'error',
-    //     ),
-    //   );
-    // }
+    if (data.isRight()) {
+      Get.offAndToNamed(AppRoutes.home);
+      Get.showSnackbar(const GetSnackBar(
+        message: 'Login Success',
+        duration: Duration(seconds: 4),
+        margin: EdgeInsets.all(10),
+        backgroundColor: Colors.lightBlue,
+      ));
+    }
 
     return await data.fold((l) => throw ServiceNotFoundException(),
         (loginBaseEntity) => loginBaseEntity);

@@ -60,7 +60,7 @@ class LoginPage extends GetView<LoginController> {
               ),
               SizedBox(height: AppSizes.r12),
               TextFormFieldWidget(
-                keyboardType: TextInputType.visiblePassword,
+                keyboardType: TextInputType.number,
                 controller: controller.passwordControler,
                 show_Password: true,
                 hinttext: 'Password',
