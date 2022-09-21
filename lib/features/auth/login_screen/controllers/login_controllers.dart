@@ -13,7 +13,7 @@ class LoginController extends GetxController {
   LoginController(this._loginUseCase);
   late TextEditingController emailControler;
   late TextEditingController passwordControler;
-  String riderFcmToken = GetStorage().read('rider_fcm_token');
+  String? riderFcmToken = GetStorage().read('rider_fcm_token');
 
   @override
   void onInit() {
@@ -31,7 +31,9 @@ class LoginController extends GetxController {
 
   Future<LoginBaseEntity> loginRider() async {
     Either<Failure, LoginBaseEntity> data = await _loginUseCase(
-        emailControler.value.text, passwordControler.value.text, riderFcmToken);
+        emailControler.value.text,
+        passwordControler.value.text,
+        riderFcmToken ?? '123');
     debugPrint('mohammed :${emailControler.value.text}');
     debugPrint('mohammed :${passwordControler.value.text}');
     debugPrint('mohammed :$riderFcmToken');

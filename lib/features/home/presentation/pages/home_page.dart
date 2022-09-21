@@ -1,8 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gtc_rider/core/localization/local_controller.dart';
 import 'package:gtc_rider/utils/routing/app_routes.dart';
+
 class HomePage extends GetView<MyLocaleController> {
   const HomePage({Key? key}) : super(key: key);
 
@@ -34,7 +34,20 @@ class HomePage extends GetView<MyLocaleController> {
                     },
                     child: Text('login'.tr)),
               ],
-            )
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            FutureBuilder(
+              builder: ((context, snapshot) {
+                if (snapshot.hasData) {
+                  return Text(snapshot.data.toString());
+                } else {
+                  return const Text('no rider info');
+                }
+              }),
+              future: myLocaleController.getRiderInfo(),
+            ),
           ],
         ));
   }

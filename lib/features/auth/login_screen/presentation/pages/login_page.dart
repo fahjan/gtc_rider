@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gtc_rider/core/style/app_colors.dart';
 import 'package:gtc_rider/core/style/app_sizes.dart';
@@ -96,10 +97,12 @@ class LoginPage extends GetView<LoginController> {
               SizedBox(height: AppSizes.r16),
               ElevatedButton(
                 onPressed: () async {
-                  // LoginBaseEntity loginBaseEntity =
+                  LoginBaseEntity loginBaseEntity =
                       await controller.loginRider();
+                  await GetStorage().write('login_rider_info', loginBaseEntity.toString());
+
                   // debugPrint('mohammed :${loginBaseEntity.data.name}');
-                  // debugPrint('mohammed :${loginBaseEntity.data.zone.title}');
+                  //debugPrint('mohammed :${loginBaseEntity.data.zone.title}');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.white,
