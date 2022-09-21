@@ -53,13 +53,15 @@ class LoginPage extends GetView<LoginController> {
           child: Column(
             children: [
               TextFormFieldWidget(
-                keyboardType: TextInputType.number,
+                keyboardType: TextInputType.emailAddress,
                 show_Password: false,
-                hinttext: 'ID Number',
+                controller: controller.emailControler,
+                hinttext: 'email',
               ),
               SizedBox(height: AppSizes.r12),
               TextFormFieldWidget(
                 keyboardType: TextInputType.visiblePassword,
+                controller: controller.passwordControler,
                 show_Password: true,
                 hinttext: 'Password',
               ),
@@ -93,11 +95,11 @@ class LoginPage extends GetView<LoginController> {
               ),
               SizedBox(height: AppSizes.r16),
               ElevatedButton(
-                onPressed: () async{
-                  LoginBaseEntity  loginBaseEntity=await controller.loginRider();
-                      debugPrint('mohammed :${loginBaseEntity.data.name}');
-                      debugPrint('mohammed :${loginBaseEntity.data.zone.title}');
-
+                onPressed: () async {
+                  // LoginBaseEntity loginBaseEntity =
+                      await controller.loginRider();
+                  // debugPrint('mohammed :${loginBaseEntity.data.name}');
+                  // debugPrint('mohammed :${loginBaseEntity.data.zone.title}');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.white,

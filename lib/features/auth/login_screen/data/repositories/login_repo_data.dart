@@ -13,9 +13,9 @@ class LoginRepoData extends LoginRepoDomain {
   LoginRepoData(this.remoteLoginDataSource);
 
   @override
-  Future<Either<Failure, LoginBaseEntity>> loginRider() async{
+  Future<Either<Failure, LoginBaseEntity>> loginRider(String email,String password,String fcmToken) async{
     try {
-      LoginBaseModel loginBaseModel = await remoteLoginDataSource.loginRider('rider@haiia.com', '123456', 'onesignal_id');
+      LoginBaseModel loginBaseModel = await remoteLoginDataSource.loginRider(email, password, fcmToken);
       debugPrint(loginBaseModel.data.email);
       debugPrint(loginBaseModel.data.zone.title);
 

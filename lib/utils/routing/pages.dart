@@ -19,7 +19,7 @@ final List<GetPage> pages = <GetPage>[
     binding: LoginBinding(),
   ),
   GetPage(
-    name: AppRoutes.loginPage,
+    name: AppRoutes.splashScreen,
     page: () => const SplashScreenPage(),
     binding: SplashScreenBinding(),
   ),

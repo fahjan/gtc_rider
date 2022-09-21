@@ -7,7 +7,7 @@ class LoginUseCase {
   LoginRepoDomain loginRepoDomain;
   LoginUseCase(this.loginRepoDomain);
 
-  Future<Either<Failure,LoginBaseEntity>> call() async{
-    return await loginRepoDomain.loginRider();
+  Future<Either<Failure,LoginBaseEntity>> call(String email,String password,String fcmToken) async{
+    return await loginRepoDomain.loginRider(email,password,fcmToken);
   }
 }

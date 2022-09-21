@@ -28,6 +28,5 @@ class RemoteLoginDataSource {
     }
 
     return LoginBaseModel.fromJson(response.data);
-    //return BaseModell(data: []);
   }
 }

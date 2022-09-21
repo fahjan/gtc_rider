@@ -13,11 +13,9 @@ class RemoteDioConnection extends RemoteConnections<Dio> {
       BaseOptions(
         baseUrl: Constants.baseUrl,
         contentType: 'application/json',
-        //connectTimeout: 300000,
       ),
     );
     _dio.interceptors.add(PrettyDioLogger());
-// customization
     _dio.interceptors.add(
       PrettyDioLogger(
         requestHeader: true,
