@@ -43,6 +43,7 @@ dependencies:
   flutter_dotenv: ^5.0.2
   firebase_core: ^1.21.1
   flutterfire_cli: ^0.2.4
+  flutter_svg: ^1.1.5
   
 
 

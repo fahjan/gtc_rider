@@ -1,6 +1,10 @@
+// ignore_for_file: unused_import, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gtc_rider/core/localization/local_controller.dart';
+import 'package:gtc_rider/features/auth/drawer_widget/presentation/widget/drawer_widget.dart';
+import 'package:gtc_rider/utils/one_signal_config.dart';
 import 'package:gtc_rider/utils/routing/app_routes.dart';
 
 class HomePage extends GetView<MyLocaleController> {
@@ -14,6 +18,7 @@ class HomePage extends GetView<MyLocaleController> {
           centerTitle: true,
           title: Text('home_page'.tr),
         ),
+        drawer: DrawerWidget(),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,

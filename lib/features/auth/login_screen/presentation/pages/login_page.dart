@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
@@ -79,7 +81,8 @@ class LoginPage extends GetView<LoginController> {
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(double.infinity, AppSizes.r48),
-                  primary: AppColors.primary,
+                 backgroundColor: AppColors.primary,
+                 foregroundColor: AppColors.white,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(AppSizes.r24),
                   ),
@@ -94,7 +97,8 @@ class LoginPage extends GetView<LoginController> {
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  primary: AppColors.white,
+                  backgroundColor: AppColors.white,
+                 
                   minimumSize: Size(double.infinity, AppSizes.r48),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(AppSizes.r24),

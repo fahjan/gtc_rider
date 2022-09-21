@@ -1,3 +1,5 @@
+// ignore_for_file: equal_keys_in_map
+
 Map<String, String> en = {
   'home_page': 'Home Page',
   'Select_language': 'Select a language',
@@ -11,6 +13,16 @@ Map<String, String> en = {
   'remember_me': 'Remember me',
   'Login': 'Login',
   'signin': 'signin',
+  'order_today': 'Order Today',
+  'trip_total': 'Trip Total',
+  'planner': 'Planner',
+  'earnings': 'Earnings',
+  'referrals': 'Referrals',
+  'statistics': 'Statistics',
+  'inbox': 'Inbox',
+  'setting': 'Setting',
+  'faqs': 'FAQs',
+  'logout': 'Logout',
   'forgot_password': 'forgot password?',
   'click_here': 'Click here',
 };

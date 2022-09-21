@@ -1,3 +1,5 @@
+// ignore_for_file: equal_keys_in_map
+
 Map<String, String> ar = {
   'home_page': 'الصفحة الرئيسية',
   'Select_language': 'اختر اللغة',
@@ -11,6 +13,16 @@ Map<String, String> ar = {
   'remember_me': 'تذكر بيانات الدخول',
   'Login': 'الدخول',
   'signin': 'تسجيل الدخول',
+  'order_today':'طلب اليوم',
+  'trip_total':'إجمالي الرحلة',
+  'planner':'مخطط',
+  'earnings':'أرباح',
+  'referrals':'الإحالات',
+  'statistics':'إحصائيات',
+  'inbox':'صندوق الوارد',
+  'setting':'إعدادات',
+  'faqs':'أسئلة وأجوبة',
+  'logout':'تسجيل خروج',
   'forgot_password': 'هل نسيت كلمة المرور؟',
   'click_here': 'انقر هنا',
 };
