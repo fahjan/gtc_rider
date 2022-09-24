@@ -1,6 +1,9 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:gtc_rider/core/localization/locale_strings.dart';
 import 'package:gtc_rider/utils/one_signal_config.dart';
 import 'package:gtc_rider/utils/routing/app_routes.dart';
@@ -10,8 +13,9 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 Future<void> main() async {
   await dotenv.load();
   WidgetsFlutterBinding.ensureInitialized();
+  await GetStorage.init();
   await OneSignalConfig.initPlatformState();
-
+  await OneSignalConfig.getDeviseFcmToken();
   runApp(const MyApp());
 }
 
@@ -28,7 +32,7 @@ class MyApp extends StatelessWidget {
           return GetMaterialApp(
             translations: LocaleString(),
             debugShowCheckedModeBanner: false,
-            initialRoute: AppRoutes.home,
+            initialRoute: AppRoutes.splashScreen,
             getPages: pages,
             locale: const Locale('en', 'US'),
           );

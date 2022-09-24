@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gtc_rider/core/style/app_colors.dart';
 import 'package:gtc_rider/core/style/app_sizes.dart';
 import 'package:gtc_rider/core/widgets/my_textstyle_widget.dart';
 import 'package:gtc_rider/features/auth/login_screen/controllers/login_controllers.dart';
+import 'package:gtc_rider/features/auth/login_screen/domain/entities/login_base_entity.dart';
 import 'package:gtc_rider/features/auth/login_screen/presentation/widgets/text_form_field_widget.dart';
 
 class LoginPage extends GetView<LoginController> {
@@ -52,13 +54,15 @@ class LoginPage extends GetView<LoginController> {
           child: Column(
             children: [
               TextFormFieldWidget(
-                keyboardType: TextInputType.number,
+                keyboardType: TextInputType.emailAddress,
                 show_Password: false,
-                hinttext: 'ID Number',
+                controller: controller.emailControler,
+                hinttext: 'email',
               ),
               SizedBox(height: AppSizes.r12),
               TextFormFieldWidget(
-                keyboardType: TextInputType.visiblePassword,
+                keyboardType: TextInputType.number,
+                controller: controller.passwordControler,
                 show_Password: true,
                 hinttext: 'Password',
               ),
@@ -92,9 +96,11 @@ class LoginPage extends GetView<LoginController> {
               ),
               SizedBox(height: AppSizes.r16),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () async {
+                      await controller.loginRider();
+                },
                 style: ElevatedButton.styleFrom(
-                  primary: AppColors.white,
+                  backgroundColor: AppColors.white,
                   minimumSize: Size(double.infinity, AppSizes.r48),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(AppSizes.r24),

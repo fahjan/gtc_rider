@@ -44,6 +44,12 @@ dependencies:
   firebase_core: ^1.21.1
   flutterfire_cli: ^0.2.4
   
+  equatable: ^2.0.5
+  dartz: ^0.10.1
+  pretty_dio_logger: ^1.2.0-beta-1
+  json_annotation: ^4.6.0
+  json_serializable: ^6.3.1
+  cached_network_image: ^3.2.2
 
 
 dev_dependencies:
@@ -56,6 +62,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  build_runner: ^2.2.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
