@@ -97,12 +97,7 @@ class LoginPage extends GetView<LoginController> {
               SizedBox(height: AppSizes.r16),
               ElevatedButton(
                 onPressed: () async {
-                  LoginBaseEntity loginBaseEntity =
                       await controller.loginRider();
-                  await GetStorage().write('login_rider_info', loginBaseEntity.toString());
-
-                  // debugPrint('mohammed :${loginBaseEntity.data.name}');
-                  //debugPrint('mohammed :${loginBaseEntity.data.zone.title}');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.white,

@@ -35,4 +35,30 @@ class LoginDataEntity extends Equatable {
         rider_status,
         you_ride,
       ];
+
+  factory LoginDataEntity.fromJson(Map<String, dynamic>? json) {
+    return LoginDataEntity(
+      id: json?['id'] as int,
+      api_token: json?['api_token'] as String,
+      name: json?['name'] as String,
+      mobile: json?['mobile'] as String,
+      rider_status: json?['rider_status'] as String,
+      you_ride: json?['you_ride'] as String,
+      zone:  LoginDataZoneEntity.fromJson((json?['zone'])),
+      email: json?['email'] as String,
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['api_token'] = api_token;
+    data['name'] = name;
+    data['mobile'] = mobile;
+    data['rider_status'] = rider_status;
+    data['you_ride'] = you_ride;
+    data['email'] = email;
+    data['zone'] = zone.toJson();
+    return data;
+  }
 }

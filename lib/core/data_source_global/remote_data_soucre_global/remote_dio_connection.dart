@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:gtc_rider/core/constants_helper/constants_strings.dart';
+import 'package:gtc_rider/core/config/constants.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import 'remote_connections.dart';
 

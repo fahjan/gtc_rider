@@ -2,8 +2,10 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:gtc_rider/core/config/constants.dart';
 import 'package:gtc_rider/core/exceptions/exceptions.dart';
 import 'package:gtc_rider/core/exceptions/failures.dart';
+import 'package:gtc_rider/core/local_storage.dart';
 import 'package:gtc_rider/features/auth/login_screen/domain/entities/login_base_entity.dart';
 import 'package:gtc_rider/features/auth/login_screen/domain/usecases/login_usecase.dart';
 import 'package:gtc_rider/utils/routing/app_routes.dart';
@@ -13,11 +15,12 @@ class LoginController extends GetxController {
   LoginController(this._loginUseCase);
   late TextEditingController emailControler;
   late TextEditingController passwordControler;
-  String? riderFcmToken = GetStorage().read('rider_fcm_token');
+  String? riderFcmToken;
 
   @override
   void onInit() {
     super.onInit();
+    riderFcmToken = GetStorage().read('rider_fcm_token');
     emailControler = TextEditingController();
     passwordControler = TextEditingController();
   }
@@ -38,6 +41,9 @@ class LoginController extends GetxController {
     debugPrint('mohammed :${passwordControler.value.text}');
     debugPrint('mohammed :$riderFcmToken');
     if (data.isRight()) {
+      await LocalStorage().writeToLocalStorageLoginRiderInfo(
+          Constants.loginRiderInfoKey,
+          data.fold((l) => throw Exception(), (r) => r));
       Get.offAndToNamed(AppRoutes.home);
       Get.showSnackbar(const GetSnackBar(
         message: 'Login Success',
@@ -51,4 +57,3 @@ class LoginController extends GetxController {
         (loginBaseEntity) => loginBaseEntity);
   }
 }
-//String email,String password,String fcmToken

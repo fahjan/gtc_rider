@@ -7,27 +7,34 @@ import 'package:gtc_rider/features/auth/login_screen/domain/entities/login_data_
 
 extension LoginBaseModelToLoginBaseEntity on LoginBaseModel {
   LoginBaseEntity toEntity() {
-    return LoginBaseEntity(data.toDataEntity());
+    return LoginBaseEntity(
+      dataa: data.toDataEntity(),
+    );
   }
 }
 
 extension LoginDataModelToLoginDataEntity on LoginDataModel {
   LoginDataEntity toDataEntity() {
     return LoginDataEntity(
-        id: id,
-        name: name,
-        email: email,
-        mobile: mobile,
-        zone: zone.toZoneEntity(),
-        api_token: api_token,
-        rider_status: rider_status,
-        you_ride: you_ride);
+      id: id,
+      name: name,
+      email: email,
+      mobile: mobile,
+      zone: zone.toZoneEntity(),
+      api_token: api_token,
+      rider_status: rider_status,
+      you_ride: you_ride,
+    );
   }
 }
 
 extension LoginDataZoneModelToLoginDataZoneEntity on LoginDataZoneModel {
   LoginDataZoneEntity toZoneEntity() {
     return LoginDataZoneEntity(
-        id: id, title: title, per_drop: per_drop, per_hour: per_hour);
+      id: id,
+      title: title,
+      per_drop: per_drop,
+      per_hour: per_hour,
+    );
   }
 }
