@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:gtc_rider/core/config/constants.dart';
 import 'package:gtc_rider/core/local_storage.dart';
 import 'package:gtc_rider/core/localization/local_controller.dart';
+import 'package:gtc_rider/features/auth/login_screen/data/datasource/localdatasource/local_login_data_source.dart';
 import 'package:gtc_rider/features/auth/login_screen/domain/entities/login_base_entity.dart';
 import 'package:gtc_rider/utils/routing/app_routes.dart';
 
@@ -41,19 +42,19 @@ class HomePage extends GetView<MyLocaleController> {
             const SizedBox(
               height: 30,
             ),
-            FutureBuilder(
-              builder: ((context, snapshot) {
-                if (snapshot.hasData) {
-                  LoginBaseEntity lbe = snapshot.data as LoginBaseEntity;
-                  return Text(
-                      '${lbe.dataa?.name} \n ${lbe.dataa?.email} \n${lbe.dataa?.mobile}\n${lbe.dataa?.zone.title}');
-                } else {
-                  return const Text('no rider info');
-                }
-              }),
-              future: LocalStorage().readFromLocalStorageLoginRiderInfo(
-                  Constants.loginRiderInfoKey),
-            ),
+            // FutureBuilder(
+            //   builder: ((context, snapshot) {
+            //     if (snapshot.hasData) {
+            //       LoginBaseEntity lbe = snapshot.data as LoginBaseEntity;
+            //       return Text(
+            //           '${lbe.dataa?.name} \n ${lbe.dataa?.email} \n${lbe.dataa?.mobile}\n${lbe.dataa?.zone.title}');
+            //     } else {
+            //       return const Text('no rider info');
+            //     }
+            //   }),
+            //   future: LocaleLoginDataSource().readFromLocalStorageLoginRiderInfo(
+            //       Constants.loginRiderInfoKey),
+            // ),
           ],
         ));
   }

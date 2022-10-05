@@ -16,10 +16,17 @@ class LoginRepoData extends LoginRepoDomain {
   Future<Either<Failure, LoginBaseEntity>> loginRider(String email,String password,String fcmToken) async{
     try {
       LoginBaseModel loginBaseModel = await remoteLoginDataSource.loginRider(email, password, fcmToken);
-      debugPrint(loginBaseModel.data.email);
-      debugPrint(loginBaseModel.data.zone.title);
-
+      //debugPrint(loginBaseModel.data!.email);
+      //debugPrint(loginBaseModel.data!.zone.title);
+      //debugPrint(loginBaseModel.error);
+      if(loginBaseModel.error == null){
       return right(loginBaseModel.toEntity()); // left from dartz package
+
+      }else{
+        return  right(LoginBaseEntity.withError(loginBaseModel.error!));
+      }
+      
+
     } on ServiceNotFoundException {
       return left(ServiceNotFoundFailure()); // right from dartz package
     }

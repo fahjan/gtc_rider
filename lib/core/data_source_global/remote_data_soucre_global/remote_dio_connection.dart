@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:gtc_rider/core/config/constants.dart';
+import 'package:gtc_rider/core/data_source_global/remote_data_soucre_global/app_interceptor.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import 'remote_connections.dart';
 
@@ -12,9 +13,11 @@ class RemoteDioConnection extends RemoteConnections<Dio> {
     _dio = Dio(
       BaseOptions(
         baseUrl: Constants.baseUrl,
-        contentType: 'application/json',
       ),
     );
+    _dio.interceptors.addAll({
+      AppInterceptors(_dio),
+    });
     _dio.interceptors.add(PrettyDioLogger());
     _dio.interceptors.add(
       PrettyDioLogger(

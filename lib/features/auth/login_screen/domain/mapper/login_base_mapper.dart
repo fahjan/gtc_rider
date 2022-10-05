@@ -8,7 +8,7 @@ import 'package:gtc_rider/features/auth/login_screen/domain/entities/login_data_
 extension LoginBaseModelToLoginBaseEntity on LoginBaseModel {
   LoginBaseEntity toEntity() {
     return LoginBaseEntity(
-      dataa: data.toDataEntity(),
+      dataa: data!.toDataEntity(),
     );
   }
 }

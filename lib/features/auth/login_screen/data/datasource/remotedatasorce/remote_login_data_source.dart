@@ -13,20 +13,21 @@ class RemoteLoginDataSource {
     String password,
     String onesignal_id,
   ) async {
-    Dio dio = _remoteConnections.remoteConnected;
-    Response response = await dio.post(
-      'login',
-      data: {
-        'email': email,
-        'password': password,
-        'onesignal_id': onesignal_id,
-      },
-    );
+    Response? response;
+    try {
+      Dio dio = _remoteConnections.remoteConnected;
+      response = await dio.post(
+        'login',
+        data: {
+          'email': email,
+          'password': password,
+          'onesignal_id': onesignal_id,
+        },
+      );
 
-    if (response.statusCode != 200) {
-      throw ServiceNotFoundException();
+      return LoginBaseModel.fromJson(response.data);
+    } on Exception catch (e){
+      return LoginBaseModel.withError(e.toString());
     }
-
-    return LoginBaseModel.fromJson(response.data);
   }
 }

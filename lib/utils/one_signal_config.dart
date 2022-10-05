@@ -8,7 +8,7 @@ class OneSignalConfig {
     OneSignal.shared.setAppId(Constants.oneSignalAppId);
   }
 
-  static Future<void> getDeviseFcmToken() async {
+  static Future<void> getDeviceFcmToken() async {
     OSDeviceState? osDeviceState = await OneSignal.shared.getDeviceState();
     await GetStorage().write('rider_fcm_token', osDeviceState?.pushToken);
     debugPrint("mohammed : ${osDeviceState?.pushToken}");
