@@ -9,6 +9,7 @@ import 'package:gtc_rider/core/widgets/my_textstyle_widget.dart';
 import 'package:gtc_rider/features/auth/login_screen/controllers/login_controllers.dart';
 import 'package:gtc_rider/features/auth/login_screen/domain/entities/login_base_entity.dart';
 import 'package:gtc_rider/features/auth/login_screen/presentation/widgets/text_form_field_widget.dart';
+import 'package:gtc_rider/utils/one_signal_config.dart';
 
 class LoginPage extends GetView<LoginController> {
   LoginPage({Key? key}) : super(key: key);
@@ -80,7 +81,10 @@ class LoginPage extends GetView<LoginController> {
               ),
               SizedBox(height: AppSizes.r28),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  OneSignalConfig.showBottomSheet('delivery_address',
+                      'pickup_address', 'delivery_fee', 'rider_tip');
+                },
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(double.infinity, AppSizes.r48),
                   primary: AppColors.primary,
@@ -97,7 +101,7 @@ class LoginPage extends GetView<LoginController> {
               SizedBox(height: AppSizes.r16),
               ElevatedButton(
                 onPressed: () async {
-                      await controller.loginRider();
+                  await controller.loginRider();
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.white,

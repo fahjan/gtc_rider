@@ -14,6 +14,7 @@ Future<void> main() async {
   await GetStorage.init();
   await OneSignalConfig.initPlatformState();
   await OneSignalConfig.getDeviceFcmToken();
+  await OneSignalConfig.notificationHandler();
   runApp(const MyApp());
 }
 

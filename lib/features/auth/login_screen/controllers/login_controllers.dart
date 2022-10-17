@@ -32,6 +32,7 @@ class LoginController extends GetxController {
     passwordControler.dispose();
     super.dispose();
   }
+  
 
   Future<LoginBaseEntity> loginRider() async {
     Either<Failure, LoginBaseEntity>? data;
