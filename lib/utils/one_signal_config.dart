@@ -1,9 +1,12 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:gtc_rider/core/config/constants.dart';
+import 'package:gtc_rider/core/localization/local_controller.dart';
+import 'package:gtc_rider/features/order_status/controllers/order_status_controller.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
@@ -28,12 +31,13 @@ class OneSignalConfig {
       log('mohammed notification additionalData delivery_address :${notificationResponse!['delivery_address']}');
       showBottomSheet<void>(
           notificationResponse['delivery_address'].toString(),
-          notificationResponse['pickup_address'].toString() ,
+          notificationResponse['pickup_address'].toString(),
           notificationResponse['delivery_fee'].toString(),
           notificationResponse['rider_tip'].toString());
       log('mohammed notification additionalData pickup_address :${notificationResponse['pickup_address']}');
       log('mohammed notification additionalData delivery_fee :${notificationResponse['delivery_fee']}');
       log('mohammed notification additionalData rider_tip :${notificationResponse['rider_tip']}');
+      log('mohammed notification additionalData rider_tip :${event.notification.additionalData}');
 
       print(
           'mohammed notification androidNotificationId:${event.notification.androidNotificationId}');
@@ -72,7 +76,7 @@ class OneSignalConfig {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('from'),
+                          Text('From'),
                           Text(pickup_address),
                           SizedBox(
                             width: 350,
@@ -83,7 +87,7 @@ class OneSignalConfig {
                               thickness: 1,
                             ),
                           ),
-                          Text('from'),
+                          Text('TO Address'),
                           Text(delivery_address),
                         ],
                       ),
@@ -103,7 +107,7 @@ class OneSignalConfig {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text('Rider tip'),
-                    Text(rider_tip),
+                    Text('$rider_tip\$'),
                   ],
                 ),
               ),
@@ -116,7 +120,7 @@ class OneSignalConfig {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text('Delivery fee'),
-                    Text(delivery_fee),
+                    Text('$delivery_fee\$'),
                   ],
                 ),
               ),
@@ -140,7 +144,17 @@ class OneSignalConfig {
                       arcBackgroundColor: Colors.grey,
                       arcType: ArcType.FULL,
                     ),
-                    InkWell(onTap: () {}, child: const Text('Accept')),
+                    InkWell(
+                        onTap: () async{
+                          Rx<Position?> position =
+                              Get.find<MyLocaleController>().position;
+                          log('mohammed latitude :${position.value!.latitude.toString()}');
+                          await Get.find<OrderStatusController>().changeOrderStatus(
+                              'rejected',
+                              position.value!.latitude.toString(),
+                              position.value!.longitude.toString());
+                        },
+                        child: const Text('Accept')),
                     const Icon(Icons.keyboard_double_arrow_right_outlined),
                   ],
                 ),

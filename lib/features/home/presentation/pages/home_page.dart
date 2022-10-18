@@ -23,6 +23,13 @@ class HomePage extends GetView<MyLocaleController> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text('Select_language'.tr),
+            Container(
+              child: Obx(
+                () => Text(controller.position.value != null
+                    ? '${controller.position.value?.latitude ?? ''} X ${controller.position.value?.longitude ?? ''}'
+                    : 'no position'),
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [

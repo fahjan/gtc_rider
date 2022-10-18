@@ -11,9 +11,11 @@ class RemoteDioConnection extends RemoteConnections<Dio> {
 
   RemoteDioConnection._() {
     _dio = Dio(
-      BaseOptions(
-        baseUrl: Constants.baseUrl,
-      ),
+      BaseOptions(baseUrl: Constants.baseUrl, headers: {
+        'Authorization':
+            'Bearer jtH55kuUMUSJrK-IBMo3Vw17832',
+        'Accept': 'application/json',
+      }),
     );
     _dio.interceptors.addAll({
       AppInterceptors(_dio),

@@ -12,11 +12,14 @@ LoginBaseModel _$LoginBaseModelFromJson(Map<String, dynamic> json) {
     requiredKeys: const ['data'],
   );
   return LoginBaseModel(
-    data: LoginDataModel.fromJson(json['data'] as Map<String, dynamic>),
-  );
+    data: json['data'] == null
+        ? null
+        : LoginDataModel.fromJson(json['data'] as Map<String, dynamic>),
+  )..error = json['error'] as String?;
 }
 
 Map<String, dynamic> _$LoginBaseModelToJson(LoginBaseModel instance) =>
     <String, dynamic>{
       'data': instance.data,
+      'error': instance.error,
     };
