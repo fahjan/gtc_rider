@@ -30,6 +30,7 @@ class MyLocaleController extends GetxController {
     StreamSubscription<Position> positionStream =
         Geolocator.getPositionStream(locationSettings: locationSettings)
             .listen((Position? _position) {
+              
       print(_position?.longitude.toString());
       position(_position);
     });

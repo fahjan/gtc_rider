@@ -13,7 +13,7 @@ class OrderStatusController extends GetxController {
       String status, String latitude, String longitude) async {
     Either<Failure, OrderStatusResponseEntity>? data=
     await orderStatusUseCase(status, latitude, longitude);
-    if (data!.isRight()) {
+    if (data.isRight()) {
       data.fold((l) => Exception(), (r) {
         Get.showSnackbar( GetSnackBar(
             message: 'Order status : ${r.message} ',
