@@ -104,7 +104,7 @@ class LoginPage extends GetView<LoginController> {
                   await controller.loginRider();
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColors.white,
+                  // backgroundColor: AppColors.white,
                   minimumSize: Size(double.infinity, AppSizes.r48),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(AppSizes.r24),
