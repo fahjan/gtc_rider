@@ -4,6 +4,6 @@ import 'package:gtc_rider/features/splash_screen/controllers/splash_screen_contr
 class SplashScreenBinding implements Bindings {
   @override
   void dependencies() {
-    Get.lazyPut(() => SplashScreenController());
+    Get.put(SplashScreenController());
   }
 }
