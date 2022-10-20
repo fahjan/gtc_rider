@@ -9,19 +9,22 @@ class TextFormFieldWidget extends StatelessWidget {
   String? hinttext;
   TextInputType keyboardType;
   bool show_Password;
+  TextEditingController controller;
 
   TextFormFieldWidget({
     Key? key,
     this.hinttext,
     required this.keyboardType,
     required this.show_Password,
+    required this.controller,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      keyboardType: TextInputType.number,
+      keyboardType: keyboardType,
       obscureText: show_Password,
+      controller: controller,
       style: TextStyle(
         fontSize: FontSizes.sp16,
         fontWeight: FontWeight.w400,
